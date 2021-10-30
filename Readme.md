@@ -6,6 +6,7 @@ React, Express and MongoDB project to make a website that could redirect to a ra
 
 ## Give it a try
 [spiller.vcmp.net/images](https://spiller.vcmp.net/images)
+
 [example rotating link](https://spiller.vcmp.net/i/617d2ca9b3a7a4382f2e8d1a)
 
 ## Want to self-host?
