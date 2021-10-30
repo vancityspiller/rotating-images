@@ -82,7 +82,7 @@ recordRoutes.route("/api/update/:id").post(function (req, response) {
 });
 
 // to display a random image from user's images
-recordRoutes.route("/i/:id").get(function(req, response) {
+recordRoutes.route("/:id").get(function(req, response) {
 
     let db_connect = dbo.getDb();
     if(req.params.id.length !== 24) {
