@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { Route, Switch } from 'react-router';
-import ImageRoute from './pages/image-routes';
 
 import Accounts from './pages/accounts';
 import ImageManager from './pages/image-manager';
@@ -29,18 +27,10 @@ export default function App() {
 
     return (
 		<React.Fragment>
-			<Switch>
-				<Route exact path="/i/:id">
-					<ImageRoute />
-				</Route>
-
-				<Route>
-					<ThemeProvider theme={theme}>
-						{ user === null && <Accounts setUser={setUser}/> }
-						{ user != null && <ImageManager user={user} />}
-					</ThemeProvider>
-				</Route>
-			</Switch>
+			<ThemeProvider theme={theme}>
+				{ user === null && <Accounts setUser={setUser}/> }
+				{ user != null && <ImageManager user={user} />}
+			</ThemeProvider>
 		</React.Fragment>
     );
 }
