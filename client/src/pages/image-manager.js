@@ -24,7 +24,7 @@ export default function ImageManager({user}) {
 
     useEffect(() => {
         axios
-        .get(`http://localhost:5000/api/images/${user}`)
+        .get(`https://spiller.vcmp.net/i/api/images/${user}`)
         .then((response) => {
             setImages(response.data);
             setLoading(false);
@@ -64,7 +64,7 @@ export default function ImageManager({user}) {
     const updateImages = async (status, immediate) => {
 
         const response = await axios.post(
-            `http://localhost:5000/api/update/${user}`,
+            `https://spiller.vcmp.net/i/api/update/${user}`,
             immediate === undefined ? images : immediate
         );
 
@@ -74,7 +74,7 @@ export default function ImageManager({user}) {
 
         // fetch images again
         axios
-        .get(`http://localhost:5000/api/images/${user}`)
+        .get(`https://spiller.vcmp.net/i/api/images/${user}`)
         .then((response) => {
             setImages(response.data);
             setLoading(false);
@@ -117,7 +117,7 @@ export default function ImageManager({user}) {
                     </Typography>
 
                     <Typography variant="subtitle1" component="div" align="center" >
-                        Your rotating link: <Link href={`http://spiller.vcmp.net/i/${user}`}>{`http://spiller.vcmp.net/i/${user}`}</Link>
+                        Your rotating link: <Link href={`https://spiller.vcmp.net/i/${user}`}>{`https://spiller.vcmp.net/i/${user}`}</Link>
                     </Typography>
 
                     <Stack

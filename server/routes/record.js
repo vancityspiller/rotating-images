@@ -86,7 +86,7 @@ recordRoutes.route("/:id").get(function(req, response) {
 
     let db_connect = dbo.getDb();
     if(req.params.id.length !== 24) {
-        response.redirect('http://spiller.vcmp.net/images');
+        response.redirect('https://spiller.vcmp.net/images');
         return;
     }
 
@@ -97,7 +97,7 @@ recordRoutes.route("/:id").get(function(req, response) {
             if (err) throw err;
 
             if(result === null) {
-                response.redirect('http://spiller.vcmp.net/images');
+                response.redirect('https://spiller.vcmp.net/images');
                 return;
             }
 

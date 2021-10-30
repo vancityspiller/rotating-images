@@ -28,7 +28,7 @@ export default function Accounts({setUser}) {
         };
 
         const response = await axios.post(
-            "http://localhost:5000/api/account",
+            "https://spiller.vcmp.net/i/api/account",
             user
         );
 
